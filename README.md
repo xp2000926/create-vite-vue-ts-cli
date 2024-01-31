@@ -6,7 +6,7 @@
 
 ## 📕模板
 
-- ✅快速生成 Vue3+TS+Vite+ElementPlus+Pinia+Axios+Mock的模板
+- ✅快速生成 [Vue3+TS+Vite+ElementPlus+Pinia+Axios+Mock的模板](https://gitee.com/xupeng888/vue-vite-ts-backstage-template)
 
 ## 📦安装
  
