@@ -6,10 +6,10 @@
 
 ## 📕模板
 
-- 快速生成 Vue3+TS+Vite+ElementPlus+Pinia+Axios+Mock的模板
+- ✅快速生成 Vue3+TS+Vite+ElementPlus+Pinia+Axios+Mock的模板
 
 ## 📦安装
-
+ 
 ```bash
 npm install create-vite-vue-ts-cli -g
 ```
