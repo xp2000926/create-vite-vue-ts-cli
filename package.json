@@ -6,6 +6,14 @@
   "scripts": {
     "build": "rollup -c rollup.config.js --bundleConfigAsCjs"
   },
+  "bin": {
+    "create-vite-vue-ts": "bin/index.js"
+  },
+  "files": [
+    "dist",
+    "bin",
+    "README.md"
+  ],
   "keywords": [
     "Vite",
     "vue",
