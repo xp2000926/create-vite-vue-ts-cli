@@ -6,7 +6,7 @@ const logger = createLogger({
   spinner: {
     interval: 300, // 变换时间 ms
     frames: ["⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏"].map((item) =>
-      chalk.blue(item)
+      chalk.green(item)
     ), // 设置加载动画
   },
 });

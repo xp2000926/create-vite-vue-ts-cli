@@ -2,7 +2,7 @@ import { select, input } from "@inquirer/prompts";
 import { clone } from "../utils/clone";
 import { name, version } from "../../package.json";
 import path from "path";
-import fs, { lchmod } from "fs-extra";
+import fs from "fs-extra";
 import chalk from "chalk";
 import axios, { AxiosResponse } from "axios";
 import { gt } from "lodash";
