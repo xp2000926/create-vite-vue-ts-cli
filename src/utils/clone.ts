@@ -1,6 +1,13 @@
 import simpleGit, { SimpleGitOptions } from "simple-git";
 import createLogger from "progress-estimator";
 import chalk from "chalk";
+import log from "./log";
+const figlet = require("figlet");
+
+const goodPrinter = async () => {
+  const data = await figlet("create-vite-vue-ts-cli");
+  console.log(chalk.rgb(40, 156, 193).visible(data));
+};
 // 初始化进度条
 const logger = createLogger({
   spinner: {
@@ -32,6 +39,7 @@ export const clone = async (
     await logger(git.clone(url, projectName, options), "代码下载中...", {
       estimate: 8000, // 展示预估时间
     });
+    goodPrinter();
     console.log();
     console.log(chalk.green("代码下载完成"));
     console.log(
@@ -45,12 +53,12 @@ export const clone = async (
     );
     console.log();
     console.log();
-    console.log(chalk.green(`项目创建成功 ${chalk.blueBright(projectName)}`));
-    console.log(chalk.green(`执行以下命令启动项目：`));
-    console.log(`cd ${chalk.blueBright(projectName)}`);
-    console.log(`${chalk.yellow("pnpm")} install`);
-    console.log(`${chalk.yellow("pnpm")} run dev`);
+    log.success(chalk.green(`项目创建成功 ${chalk.blueBright(projectName)}`));
+    log.success(chalk.green(`执行以下命令启动项目：`));
+    log.info(`cd ${chalk.blueBright(projectName)}`);
+    log.info(`${chalk.yellow("pnpm")} install`);
+    log.info(`${chalk.yellow("pnpm")} run dev`);
   } catch (error) {
-    console.log(chalk.red("下载失败"));
+    log.error(chalk.red("下载失败"));
   }
 };

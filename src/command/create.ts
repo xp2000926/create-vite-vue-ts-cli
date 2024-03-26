@@ -54,6 +54,7 @@ export async function isOverwrite(fileName: string) {
 }
 export const getNpmInfo = async (npmName: string) => {
   const npmUrl = `https://registry.npmjs.org/${npmName}`;
+ 
   let res = {};
   try {
     res = await axios.get(npmUrl);
@@ -64,6 +65,7 @@ export const getNpmInfo = async (npmName: string) => {
 };
 export const getNpmLatestVersion = async (npmName: string) => {
   const { data } = (await getNpmInfo(npmName)) as AxiosResponse;
+ 
   return data["dist-tags"].latest;
 };
 export const checkVersion = async (name: string, version: string) => {

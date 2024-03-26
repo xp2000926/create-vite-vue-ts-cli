@@ -9,8 +9,9 @@ const spinner = ora({
       chalk.blue(item)
     ), // 设置加载动画
   },
-}).start();
+});
 export function update() {
+   console.log('update');
   spinner.start();
   process.exec("npm i create-vite-vue-ts-cli -g", (error) => {
     spinner.stop();
